@@ -108,7 +108,9 @@
 }
 
 - (void)reStart {
-    dispatch_source_cancel(_timer);
+    if (_timer) {
+        dispatch_source_cancel(_timer);
+    }
     dispatch_async(dispatch_get_main_queue(), ^{
         
         if (_timer) {
