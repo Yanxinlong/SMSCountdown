@@ -28,7 +28,7 @@
     self.titleLabel.font = [UIFont systemFontOfSize:12.0f];
     
     self.layer.cornerRadius = 4;
-    //ceshi
+    
     self.clipsToBounds = YES;
     
     [self setTitle:[_strCommon length] > 0 ? _strCommon : @"发送验证码" forState:UIControlStateNormal];

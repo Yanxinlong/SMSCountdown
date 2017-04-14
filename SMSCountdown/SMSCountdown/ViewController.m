@@ -25,7 +25,12 @@
 }
 
 - (void)creatUI {
-
+    UIButton *reStartButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    reStartButton.frame = CGRectMake(100, 140, 80, 30);
+    [reStartButton setTitle:@"重新发送" forState:UIControlStateNormal];
+    [reStartButton setBackgroundColor:[UIColor purpleColor]];
+    [reStartButton addTarget:self action:@selector(reStartClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:reStartButton];
 }
 
 - (void)creatCountdownButton {
@@ -45,6 +50,10 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [_timerButton reStart];
     });
+}
+
+- (void)reStartClick {
+    [_timerButton reStart];
 }
 
 
