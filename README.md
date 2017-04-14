@@ -3,6 +3,7 @@
 =========================
 
 创建倒计时按钮
+-------------------------
 ```javascript
 _timerButton = [[CountDownButton alloc] initWithFrame:CGRectMake(100, 100, 80, 32)];
     
